@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delight Nyanhete | Portfolio</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Quicksand&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Section Dock (fixed) -->
+<nav class="section-dock" aria-label="Section navigation">
+  <a href="#about" class="dock-btn" data-target="about" aria-label="About">
+    <i class="bi bi-person"></i><span>About</span>
+  </a>
+  <a href="#projects" class="dock-btn" data-target="projects" aria-label="Projects">
+    <i class="bi bi-folder2-open"></i><span>Projects</span>
+  </a>
+  <a href="#technologies" class="dock-btn" data-target="technologies" aria-label="Technologies">
+    <i class="bi bi-cpu"></i><span>Tech</span>
+  </a>
+  <a href="#contact" class="dock-btn" data-target="contact" aria-label="Contact">
+    <i class="bi bi-envelope"></i><span>Contact</span>
+  </a>
+  <a href="#reviews" class="dock-btn" data-target="reviews" aria-label="Reviews">
+    <i class="bi bi-chat-dots"></i><span>Reviews</span>
+  </a>
+</nav>
+
+
+  <!-- Floating action buttons -->
+  <div class="action-buttons">
+    <div class="action-button">
+      <a href="https://github.com/Delight-bot" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+    </div>
+    <div class="action-button">
+      <a href="https://linkedin.com/in/delight-nyanhete" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+    </div>
+    <div class="action-button">
+      <a href="Delight_Nyanhete__Resume.pdf" target="_blank" aria-label="Resume"><i class="bi bi-file-earmark-person"></i></a>
+    </div>
+  </div>
+
+  <!-- Header / Greeting -->
+  <header>
+    <h1>Hello, I'm Delight</h1>
+    <p>I build warm, glowing, interactive experiences for the web and beyond.</p>
+  </header>
+
+  <!-- Nav -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#technologies">Technologies</a>
+    <a href="#contact">Contact</a>
+    <a href="#reviews">Reviews</a>
+  </nav>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m a Computer Science student at Grambling State University with a strong focus on
+      web apps, game development, and accessible design. I enjoy turning ideas into polished, interactive sites and tools.
+    </p>
+    <div class="resume-link">
+      <a class="glow-button" href="Delight_Nyanhete__Resume.pdf" target="_blank">Download Resume</a>
+    </div>
+  </section>
+
+  <!-- Projects (JS renders cards here) -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <p class="section-sub">Click a tile to open a folder-style modal with details, links, and space for demos/screenshots.</p>
+    <div id="projectGrid" class="project-grid"></div>
+  </section>
+
+  <!-- Modal for project details -->
+  <div id="projectModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <button class="close-button" aria-label="Close modal" onclick="closeModal()">&times;</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Technologies -->
+  <section id="technologies">
+    <h2>Technologies I Use</h2>
+    <div class="tech-grid">
+      <div class="tech-icon" title="HTML"><i class="bi bi-filetype-html"></i></div>
+      <div class="tech-icon" title="CSS"><i class="bi bi-filetype-css"></i></div>
+      <div class="tech-icon" title="JavaScript"><i class="bi bi-filetype-js"></i></div>
+      <div class="tech-icon" title="Python"><i class="bi bi-filetype-py"></i></div>
+      <div class="tech-icon" title="C#"><i class="bi bi-filetype-cs"></i></div>
+      <div class="tech-icon" title="SQL"><i class="bi bi-database"></i></div>
+      <div class="tech-icon" title="React (icon placeholder)"><i class="bi bi-bootstrap"></i></div>
+      <div class="tech-icon" title="Unity"><i class="bi bi-controller"></i></div>
+      <div class="tech-icon" title="Flask (cloud placeholder)"><i class="bi bi-cloud"></i></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form class="contact-form" action="mailto:delightnyanhete2023@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required/>
+      <input type="email" name="email" placeholder="Your Email" required/>
+      <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews">
+    <h2>Leave a Review</h2>
+    <form class="review-form" id="reviewForm">
+      <input type="text" id="reviewer" placeholder="Your Name" required/>
+      <textarea id="reviewText" rows="4" placeholder="Your review here..." required></textarea>
+      <button type="submit">Submit Review</button>
+    </form>
+    <div class="review-container" id="reviewContainer">
+      <h3>Reviews</h3>
+      <!-- New reviews will appear here -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Delight Nyanhete ·
+    <a href="https://github.com/Delight-bot" target="_blank">GitHub</a> ·
+    <a href="https://linkedin.com/in/delight-nyanhete" target="_blank">LinkedIn</a>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="projects.js"></script>
+</body>
+</html>
+
