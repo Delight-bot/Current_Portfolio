@@ -14,7 +14,7 @@ header {
 header h1 {
   font-family: 'Orbitron', sans-serif;
   font-size: 3rem;
-  color: #ff6f61;
+  color: #f1c5dd;
   text-shadow: 0 0 10px #ff9e80, 0 0 30px #ff6f61;
 }
 
@@ -253,7 +253,7 @@ footer {
 }
 
 .modal-content {
-  background: #2c0f13;
+  background: #060606;
   color: #fff8f0;
   padding: 2rem;
   max-width: 600px;
@@ -338,4 +338,12 @@ footer {
   .dock-btn { padding: 10px; }
   .dock-btn span { display: none; } /* show just icons on small screens */
   body { padding-left: 0; padding-bottom: 80px; } /* room for bottom dock */
+}
+.hero-pic {
+  width: 400px;
+  height: 500px;
+  border-radius: 40%; /* round */
+  border: 3px solid #f69471; /* warm glow border */
+  box-shadow: 0 0 25px #f69471; /* glowing tomato-red */
+  margin: 1rem 0;
 }
