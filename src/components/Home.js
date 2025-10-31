@@ -9,9 +9,9 @@ const Home = () => {
   return (
     <section id="home" className="home-section">
       <div className="home-content">
-        <h1 className="name">Your Name</h1>
+        <h1 className="name">Delight Nyanhete</h1>
         <p className="tagline">
-          Software Developer focused on scalable systems and human-centered solutions.
+          CS Student & AI/ML Engineer | Building intelligent solutions that make an impact
         </p>
         <div className="cta-buttons">
           <button className="btn btn-primary" onClick={scrollToProjects}>

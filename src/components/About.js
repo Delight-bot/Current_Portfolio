@@ -3,9 +3,10 @@ import './About.css';
 
 const About = () => {
   const skills = {
-    languages: ['Python', 'JavaScript', 'Java', 'C++', 'SQL'],
-    frameworks: ['React', 'Node.js', 'Express', 'Django', 'Flask'],
-    tools: ['Git', 'Docker', 'AWS', 'MongoDB', 'PostgreSQL']
+    languages: ['Python', 'JavaScript', 'SQL', 'HTML/CSS', 'C#', 'Swift'],
+    mlLibraries: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'Pandas', 'NumPy', 'Plotly', 'Matplotlib', 'Seaborn'],
+    frameworks: ['React', 'Node.js', 'Flask', 'TailwindCSS', 'Unity'],
+    tools: ['Git', 'MySQL', 'Firebase', 'Supabase']
   };
 
   return (
@@ -16,17 +17,21 @@ const About = () => {
         <div className="about-content">
           <div className="bio">
             <p>
-              Originally from Honde Valley, I'm a software developer passionate about building
-              scalable systems that solve real-world problems. Currently pursuing my degree in
-              Computer Science, I focus on creating human-centered solutions that make a meaningful impact.
+              I'm a Computer Science student at Grambling State University with a 4.0 GPA, passionate about
+              leveraging AI and machine learning to solve real-world problems. My experience spans across
+              top-tier programs including MIT FutureMakers, Apple's Arise and Shine Bootcamp, and the
+              Texas Advanced Computing Center.
             </p>
             <p>
-              My technical interests span full-stack development, machine learning, and cloud computing.
-              I'm driven by the challenge of turning complex problems into elegant, efficient solutions.
+              I specialize in developing intelligent systems using deep learning, full-stack development,
+              and data science. From building plant disease detection models with 95%+ accuracy to creating
+              campus wellness platforms, I focus on creating solutions that blend technical excellence with
+              meaningful social impact.
             </p>
             <p>
-              Long-term, I aim to bridge technology and social impact, creating systems that not only
-              work efficiently but also serve communities meaningfully.
+              Currently, I'm a Quantitative Analysis Fellow at Citi Markets and an AI Studio Fellow at
+              Break Through Tech AI, where I continue to push the boundaries of what's possible with
+              technology while making it accessible to everyone.
             </p>
           </div>
 
@@ -44,7 +49,16 @@ const About = () => {
               </div>
 
               <div className="skill-category">
-                <h4>Frameworks & Libraries</h4>
+                <h4>ML/AI Libraries</h4>
+                <div className="skill-tags">
+                  {skills.mlLibraries.map((skill, index) => (
+                    <span key={index} className="skill-tag">{skill}</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="skill-category">
+                <h4>Frameworks & Tools</h4>
                 <div className="skill-tags">
                   {skills.frameworks.map((skill, index) => (
                     <span key={index} className="skill-tag">{skill}</span>
@@ -53,7 +67,7 @@ const About = () => {
               </div>
 
               <div className="skill-category">
-                <h4>Tools & Technologies</h4>
+                <h4>Tools & Databases</h4>
                 <div className="skill-tags">
                   {skills.tools.map((skill, index) => (
                     <span key={index} className="skill-tag">{skill}</span>
@@ -64,8 +78,11 @@ const About = () => {
           </div>
 
           <div className="timeline-highlight">
-            <h3>Current Role</h3>
-            <p><strong>2024 – Present:</strong> Research Assistant at Grambling State University</p>
+            <h3>Education</h3>
+            <p><strong>Grambling State University</strong></p>
+            <p>Bachelor of Science in Computer Science | GPA: 4.0 | Expected December 2027</p>
+            <p><em>Relevant Coursework:</em> Data Structures and Algorithms, Software Engineering,
+            Artificial Intelligence, Computer Architecture, Multivariable Calculus, Statistics</p>
           </div>
         </div>
       </div>

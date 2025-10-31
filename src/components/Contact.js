@@ -7,7 +7,7 @@ const Contact = () => {
       <div className="container">
         <h2 className="section-title">Let's Connect</h2>
         <p className="contact-intro">
-          Let's connect and build something meaningful.
+          I'm always open to discussing new opportunities, collaborations, or just chatting about tech and AI!
         </p>
 
         <div className="contact-content">
@@ -18,7 +18,7 @@ const Contact = () => {
               </div>
               <div className="contact-details">
                 <h3>Email</h3>
-                <a href="mailto:your.email@example.com">your.email@example.com</a>
+                <a href="mailto:dnyanhet@gsumail.gram.edu">dnyanhet@gsumail.gram.edu</a>
               </div>
             </div>
 
@@ -28,8 +28,8 @@ const Contact = () => {
               </div>
               <div className="contact-details">
                 <h3>LinkedIn</h3>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
-                  linkedin.com/in/yourprofile
+                <a href="https://linkedin.com/in/delight-nyanhete" target="_blank" rel="noopener noreferrer">
+                  linkedin.com/in/delight-nyanhete
                 </a>
               </div>
             </div>
@@ -40,8 +40,8 @@ const Contact = () => {
               </div>
               <div className="contact-details">
                 <h3>GitHub</h3>
-                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-                  github.com/yourusername
+                <a href="https://github.com/Delight-bot" target="_blank" rel="noopener noreferrer">
+                  github.com/Delight-bot
                 </a>
               </div>
             </div>
@@ -62,10 +62,10 @@ const Contact = () => {
           <div className="contact-cta">
             <h3>Open to Opportunities</h3>
             <p>
-              I'm currently seeking internships and full-time opportunities in software engineering.
-              Feel free to reach out if you'd like to collaborate or just chat about tech!
+              I'm actively seeking summer 2026 internships and new grad opportunities in software engineering,
+              machine learning, and quantitative analysis. Let's connect if you'd like to collaborate or discuss tech!
             </p>
-            <a href="mailto:your.email@example.com" className="btn btn-primary">
+            <a href="mailto:dnyanhet@gsumail.gram.edu" className="btn btn-primary">
               Get in Touch
             </a>
           </div>

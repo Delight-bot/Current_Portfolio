@@ -7,72 +7,44 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Project One',
-      description: 'A scalable web application for managing tasks',
-      techStack: ['React', 'Node.js', 'MongoDB'],
-      github: 'https://github.com/yourusername/project-one',
-      demo: 'https://project-one-demo.com',
+      title: 'Breath Easy',
+      description: 'Privacy-preserving respiratory health prediction app with federated learning',
+      techStack: ['React', 'TailwindCSS', 'TensorFlow.js', 'Firebase'],
+      github: '#',
+      demo: null,
       thumbnail: null,
       details: {
-        problem: 'Users needed a simple yet powerful task management system that syncs across devices.',
-        approach: 'Built a full-stack application with real-time sync using WebSockets and MongoDB change streams.',
-        outcome: 'Successfully deployed with 100+ active users and 99.9% uptime.'
+        problem: 'Communities needed real-time respiratory symptom prediction while maintaining user privacy in health data sharing.',
+        approach: 'Built TensorFlow.js neural network with federated learning for symptom prediction. Developed React app with real-time AQI tracking and Firebase backend for decentralized storage.',
+        outcome: 'Implemented privacy-preserving federated model training with 4-class severity classification using anonymized community data.'
       }
     },
     {
       id: 2,
-      title: 'Project Two',
-      description: 'Machine learning model for sentiment analysis',
-      techStack: ['Python', 'TensorFlow', 'Flask'],
-      github: 'https://github.com/yourusername/project-two',
+      title: 'ImpactFlow',
+      description: 'Needs-based volunteer matching platform for basic service distribution',
+      techStack: ['React', 'TailwindCSS', 'Flask', 'Supabase'],
+      github: '#',
       demo: null,
       thumbnail: null,
       details: {
-        problem: 'Businesses needed automated sentiment analysis for customer feedback.',
-        approach: 'Trained a neural network on 50K labeled reviews, deployed as REST API.',
-        outcome: 'Achieved 89% accuracy with sub-second response times.'
+        problem: 'Communities needed an efficient way to match volunteers with beneficiaries while respecting privacy and consent.',
+        approach: 'Engineered needs-based matching system using structured user input and preference modeling. Built secure multi-step registration flows with form validation and conditional data capture.',
+        outcome: 'Developed admin tools for profile inspection, manual overrides, and privacy-preserving consent workflows to support edge-case interventions.'
       }
     },
     {
       id: 3,
-      title: 'Project Three',
-      description: 'Mobile-first e-commerce platform',
-      techStack: ['React Native', 'Firebase', 'Stripe'],
-      github: 'https://github.com/yourusername/project-three',
-      demo: 'https://project-three-demo.com',
-      thumbnail: null,
-      details: {
-        problem: 'Small businesses lacked affordable mobile commerce solutions.',
-        approach: 'Created a customizable mobile storefront with secure payment processing.',
-        outcome: 'Reduced development time by 60% compared to native apps.'
-      }
-    },
-    {
-      id: 4,
-      title: 'Project Four',
-      description: 'Data visualization dashboard for analytics',
-      techStack: ['D3.js', 'React', 'PostgreSQL'],
-      github: 'https://github.com/yourusername/project-four',
-      demo: 'https://project-four-demo.com',
-      thumbnail: null,
-      details: {
-        problem: 'Teams struggled to understand complex datasets quickly.',
-        approach: 'Built interactive visualizations with real-time data updates.',
-        outcome: 'Reduced decision-making time by 40% for stakeholders.'
-      }
-    },
-    {
-      id: 5,
-      title: 'Project Five',
-      description: 'Cloud-based file sharing system',
-      techStack: ['AWS S3', 'Lambda', 'React'],
-      github: 'https://github.com/yourusername/project-five',
+      title: 'ALPFA Connect Platform',
+      description: 'Student-professional networking platform with job board features',
+      techStack: ['React', 'Node.js', 'Python', 'MySQL'],
+      github: '#',
       demo: null,
       thumbnail: null,
       details: {
-        problem: 'Organizations needed secure, scalable file sharing.',
-        approach: 'Leveraged AWS serverless architecture for automatic scaling.',
-        outcome: 'Handles 10K+ daily uploads with 99.99% reliability.'
+        problem: 'Students needed a centralized platform to connect with professionals and access job opportunities.',
+        approach: 'Built web platform with scalable backend (Python) and responsive frontend (Node.js/React). Implemented job board features and MySQL-based role management.',
+        outcome: 'Successfully supported 300+ student-professional connections and streamlined job application flow with mentoring access.'
       }
     }
   ];

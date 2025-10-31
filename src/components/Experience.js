@@ -4,58 +4,87 @@ import './Experience.css';
 const Experience = () => {
   const experiences = [
     {
-      role: 'Student Research Assistant',
-      organization: 'Grambling State University',
-      date: '2024 – Present',
-      description: 'NLP-powered diagnostic research',
+      role: 'Quantitative Analysis Fellow',
+      organization: 'Citi Markets',
+      date: 'September 2025 – Present',
+      description: 'Advanced financial modeling and quantitative analysis',
       details: [
-        'Developing natural language processing models for medical diagnostics',
-        'Collaborating with faculty on research publications',
-        'Analyzing large datasets for pattern recognition'
+        '1 of 10 fellows in the Quantitative Analysis track',
+        'Working alongside trading and quant teams on advanced financial modeling'
+      ]
+    },
+    {
+      role: 'AI Studio Fellow',
+      organization: 'Break Through Tech AI | Cornell Machine Learning Foundations Certificate',
+      date: 'May 2025 – Present',
+      description: 'Machine learning engineering with industry partner',
+      details: [
+        'Developing regression models with Accenture to predict pump failures using synthetic sensor data',
+        'Reducing unplanned downtime through predictive maintenance models'
+      ]
+    },
+    {
+      role: 'Fellow',
+      organization: 'Microsoft Emerging Leaders in Security',
+      date: 'July 2025 - Present',
+      description: 'Cybersecurity and career development',
+      details: [
+        'Selected from 1,300+ applicants for intensive Microsoft-led security program',
+        'Exploring cybersecurity, career navigation, and mentorship opportunities'
+      ]
+    },
+    {
+      role: 'App & Software Development Fellow',
+      organization: 'Apple | Arise and Shine Bootcamp',
+      date: 'May - July 2025',
+      description: 'Campus wellness platform development',
+      details: [
+        'Designed BloomSpace, a campus wellness platform for neurodivergent students',
+        'Built A* routing algorithm in Node.js to help students navigate low-crowd paths',
+        'Embedded faculty-student check-ins and health tracking modules for personalized support'
+      ]
+    },
+    {
+      role: 'Advanced Computing Student Challenge',
+      organization: 'Texas Advanced Computing Center',
+      date: 'May - July 2025',
+      description: 'Machine learning for healthcare analytics',
+      details: [
+        'Developed logistic regression and random forest models to identify Alzheimer\'s risk factors',
+        'Validated model generalization across demographic regions, achieving 83% early-stage screening accuracy',
+        'Built user-friendly frontend improving accessibility of medical ML insights for non-technical users'
+      ]
+    },
+    {
+      role: 'Game Development Fellow',
+      organization: 'Activision x EICOP Program',
+      date: 'June - July 2025',
+      description: 'Unity-based game development',
+      details: [
+        'Delivered 5 Unity-based games using C# by leading a team of 3 in story-driven game design',
+        'Increased user engagement metrics in demos by 40%',
+        'Strengthened C# skills through gameplay mechanics development and iterative design reviews'
+      ]
+    },
+    {
+      role: 'AI & Deep Learning Fellow',
+      organization: 'MIT FutureMakers Program',
+      date: 'June - August 2024',
+      description: 'Agricultural AI and computer vision',
+      details: [
+        'Built plant disease detection system using VGG16 and CNN models on 160K+ images, achieving 95%+ accuracy',
+        'Built TinyBERT-based model to suggest plant disease treatments',
+        'Developed interactive map-based UI integrating ML predictions for real-time crop health visualization'
       ]
     },
     {
       role: 'Executive Board Member',
-      organization: 'ACM Chapter',
-      date: '2024 – Present',
-      description: 'Organized developer study groups',
+      organization: 'ACM Chapter, Grambling State University',
+      date: 'May 2024 – Present',
+      description: 'Chapter leadership and growth',
       details: [
-        'Led weekly coding workshops and tech talks',
-        'Coordinated hackathons and coding competitions',
-        'Mentored junior students in software development'
-      ]
-    },
-    {
-      role: 'Software Engineering Fellow',
-      organization: 'CodePath',
-      date: 'Summer 2024',
-      description: 'Completed Intermediate Software Engineering Track',
-      details: [
-        'Mastered advanced algorithms and data structures',
-        'Built full-stack applications using modern frameworks',
-        'Collaborated on team projects with industry mentors'
-      ]
-    },
-    {
-      role: 'Technical Workshop Participant',
-      organization: 'HBCU First',
-      date: '2023 – 2024',
-      description: 'Leadership and technical development',
-      details: [
-        'Participated in executive leadership programs',
-        'Networked with tech industry professionals',
-        'Developed soft skills for tech leadership roles'
-      ]
-    },
-    {
-      role: 'Virtual Intern',
-      organization: 'IBM / Oak Ridge ORISE',
-      date: '2024',
-      description: 'Cloud computing and enterprise systems',
-      details: [
-        'Gained hands-on experience with cloud infrastructure',
-        'Completed IBM certification programs',
-        'Worked on enterprise-level software solutions'
+        'Revived the chapter and increased membership by 50%',
+        'Launched biweekly events, panels, and hackathons for student engagement'
       ]
     }
   ];
