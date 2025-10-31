@@ -1,70 +1,175 @@
-# Getting Started with Create React App
+# Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive portfolio website built with React, showcasing projects, experience, and professional achievements.
+
+## Features
+
+- **Home/Landing Page** - Eye-catching hero section with call-to-action buttons
+- **About Me** - Professional bio with skills grid and technical expertise
+- **Projects** - Interactive project cards with detailed modal views (Problem → Approach → Outcome format)
+- **Experience** - Timeline display of work experience, internships, and programs
+- **Conference Gallery** - Photo grid showcasing professional events and networking
+- **Contact Section** - Multiple ways to connect (Email, LinkedIn, GitHub, Calendly)
+- **Fully Responsive** - Optimized for desktop, tablet, and mobile devices
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Navigate to the project directory:
+```bash
+cd portfolio-website
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm start
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## Customization
+
+### Update Your Information
+
+1. **Home Component** ([src/components/Home.js](src/components/Home.js)):
+   - Replace "Your Name" with your actual name
+   - Update the tagline to reflect your professional focus
+   - Add your resume PDF to the `public` folder
+
+2. **About Component** ([src/components/About.js](src/components/About.js)):
+   - Update the bio paragraphs with your personal story
+   - Modify the skills arrays with your actual technical skills
+   - Update the current role information
+
+3. **Projects Component** ([src/components/Projects.js](src/components/Projects.js)):
+   - Replace the sample projects with your actual projects
+   - Add GitHub links, live demo URLs, and project thumbnails
+   - Update tech stacks and project details
+
+4. **Experience Component** ([src/components/Experience.js](src/components/Experience.js)):
+   - Replace with your actual work experience and programs
+   - Update dates, organizations, and descriptions
+
+5. **Gallery Component** ([src/components/Gallery.js](src/components/Gallery.js)):
+   - Add your conference photos to the `public/images` folder
+   - Update event titles, locations, and descriptions
+
+6. **Contact Component** ([src/components/Contact.js](src/components/Contact.js)):
+   - Replace placeholder email with your actual email
+   - Add your LinkedIn, GitHub, and Calendly links
+
+7. **Footer Component** ([src/components/Footer.js](src/components/Footer.js)):
+   - Update "Your Name" with your actual name
+
+### Color Scheme
+
+The primary color scheme uses a purple gradient (#667eea to #764ba2). To customize:
+
+- Update gradient colors in:
+  - [src/components/Home.css](src/components/Home.css)
+  - [src/components/Contact.css](src/components/Contact.css)
+- Update accent colors throughout component CSS files
 
 ## Available Scripts
 
-In the project directory, you can run:
-
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Runs the app in development mode at [http://localhost:3000](http://localhost:3000).
 
 ### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode.
 
 ### `npm run build`
+Builds the app for production to the `build` folder. The build is optimized and ready for deployment.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deployment
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Deploy to Netlify
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Build your project:
+```bash
+npm run build
+```
 
-### `npm run eject`
+2. Deploy the `build` folder to Netlify:
+   - Drag and drop the build folder to [Netlify Drop](https://app.netlify.com/drop)
+   - Or connect your GitHub repo for automatic deployments
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Deploy to Vercel
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Install Vercel CLI:
+```bash
+npm install -g vercel
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Deploy:
+```bash
+vercel
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Deploy to GitHub Pages
 
-## Learn More
+1. Install gh-pages:
+```bash
+npm install --save-dev gh-pages
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Add to `package.json`:
+```json
+"homepage": "https://yourusername.github.io/portfolio",
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Deploy:
+```bash
+npm run deploy
+```
 
-### Code Splitting
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+portfolio-website/
+├── public/
+│   └── resume.pdf (add your resume here)
+├── src/
+│   ├── components/
+│   │   ├── Home.js & Home.css
+│   │   ├── About.js & About.css
+│   │   ├── Projects.js & Projects.css
+│   │   ├── Experience.js & Experience.css
+│   │   ├── Gallery.js & Gallery.css
+│   │   ├── Contact.js & Contact.css
+│   │   └── Footer.js & Footer.css
+│   ├── App.js
+│   ├── App.css
+│   └── index.js
+└── package.json
+```
 
-### Analyzing the Bundle Size
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- React 18
+- CSS3 with modern features (Grid, Flexbox, Animations)
+- Responsive design principles
+- Smooth scrolling navigation
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project is open source and available for personal use.
 
-### Advanced Configuration
+## Support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For issues or questions, please open an issue in the repository.
