@@ -1,6 +1,6 @@
 .contact-section {
   padding: 5rem 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #FF6B6B 0%, #FFD93D 100%);
   color: white;
 }
 
@@ -92,7 +92,7 @@
 
 .contact-cta h3 {
   font-size: 1.8rem;
-  color: #667eea;
+  color: #FF6B6B;
   margin-bottom: 1rem;
 }
 
@@ -117,13 +117,13 @@
 }
 
 .contact-cta .btn-primary {
-  background-color: #667eea;
+  background: linear-gradient(135deg, #FF6B6B, #FFD93D);
   color: white;
 }
 
 .contact-cta .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
 }
 
 @media (max-width: 768px) {

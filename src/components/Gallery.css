@@ -28,14 +28,14 @@
 
 .gallery-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.2);
+  box-shadow: 0 8px 24px rgba(255, 107, 107, 0.2);
 }
 
 .gallery-image {
   width: 100%;
   height: 220px;
   overflow: hidden;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #FF6B6B 0%, #FFD93D 100%);
 }
 
 .gallery-image img {
@@ -50,7 +50,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #FF6B6B 0%, #FFD93D 100%);
 }
 
 .placeholder-image span {
@@ -71,7 +71,7 @@
 }
 
 .location {
-  color: #667eea;
+  color: #FF6B6B;
   font-weight: 600;
   font-size: 0.95rem;
   margin-bottom: 0.8rem;

@@ -20,7 +20,7 @@
 
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 8px 24px rgba(255, 107, 107, 0.3);
 }
 
 .project-thumbnail {
@@ -60,8 +60,8 @@
 }
 
 .tech-badge {
-  background-color: #e8eaf6;
-  color: #667eea;
+  background-color: #FFE8E8;
+  color: #FF6B6B;
   padding: 0.4rem 0.8rem;
   border-radius: 12px;
   font-size: 0.85rem;
@@ -75,14 +75,14 @@
 }
 
 .project-links a {
-  color: #667eea;
+  color: #FF6B6B;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .project-links a:hover {
-  color: #764ba2;
+  color: #FFD93D;
   text-decoration: underline;
 }
 
@@ -153,7 +153,7 @@
 
 .modal-section h3 {
   font-size: 1.3rem;
-  color: #667eea;
+  color: #FF6B6B;
   margin-bottom: 0.8rem;
 }
 
@@ -183,19 +183,19 @@
 }
 
 .modal-links .btn-primary {
-  background-color: #667eea;
+  background: linear-gradient(135deg, #FF6B6B, #FFD93D);
   color: white;
 }
 
 .modal-links .btn-secondary {
   background-color: transparent;
-  color: #667eea;
-  border: 2px solid #667eea;
+  color: #FF6B6B;
+  border: 2px solid #FF6B6B;
 }
 
 .modal-links .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
 }
 
 @media (max-width: 768px) {
