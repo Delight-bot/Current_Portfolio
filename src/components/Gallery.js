@@ -46,7 +46,7 @@ const Gallery = () => {
       <div className="container">
         <h2 className="section-title">Conferences & Events</h2>
         <p className="gallery-intro">
-          Engaged with tech communities, learned from industry leaders, and built meaningful connections.
+          Intellectual quest and travel
         </p>
 
         <div className="gallery-grid">
