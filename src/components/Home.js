@@ -18,7 +18,10 @@ const Home = () => {
     <section id="home" className="home-section" style={sectionStyle}>
       <div className="hero-overlay"></div>
       <div className="home-content">
-        <h1 className="name">Delight Nyanhete</h1>
+        <h1 className="name">
+          <span className="name-intro">Delighted to meet you</span>
+          <span className="name-reveal">Delight Nyanhete</span>
+        </h1>
         <p className="tagline">
           CS Student & AI/ML Engineer | Building intelligent solutions that make an impact
         </p>
