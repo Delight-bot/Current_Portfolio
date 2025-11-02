@@ -8,7 +8,7 @@ const Home = () => {
   };
 
   const sectionStyle = {
-    backgroundImage: `linear-gradient(135deg, rgba(255, 107, 107, 0.85) 0%, rgba(255, 217, 61, 0.85) 100%), url(${heroImage})`,
+    backgroundImage: `url(${heroImage})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat'
@@ -16,6 +16,7 @@ const Home = () => {
 
   return (
     <section id="home" className="home-section" style={sectionStyle}>
+      <div className="hero-overlay"></div>
       <div className="home-content">
         <h1 className="name">Delight Nyanhete</h1>
         <p className="tagline">
