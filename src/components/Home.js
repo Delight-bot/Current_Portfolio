@@ -1,13 +1,21 @@
 import React from 'react';
 import './Home.css';
+import heroImage from './givesisters2.jpg';
 
 const Home = () => {
   const scrollToProjects = () => {
     document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
   };
 
+  const sectionStyle = {
+    backgroundImage: `linear-gradient(135deg, rgba(255, 107, 107, 0.85) 0%, rgba(255, 217, 61, 0.85) 100%), url(${heroImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat'
+  };
+
   return (
-    <section id="home" className="home-section">
+    <section id="home" className="home-section" style={sectionStyle}>
       <div className="home-content">
         <h1 className="name">Delight Nyanhete</h1>
         <p className="tagline">
