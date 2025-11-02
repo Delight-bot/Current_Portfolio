@@ -48,8 +48,9 @@
 }
 
 .btn-primary {
-  background-color: white;
-  color: #FF6B6B;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: 2px solid #FF6B6B;
 }
 
 .btn-secondary {

@@ -80,14 +80,14 @@
 }
 
 .contact-cta {
-  background: white;
-  color: #333;
+  background: #1a1a1a;
+  color: #ffffff;
   padding: 2.5rem;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 .contact-cta h3 {
@@ -97,7 +97,7 @@
 }
 
 .contact-cta p {
-  color: #666;
+  color: #c0c0c0;
   line-height: 1.7;
   margin-bottom: 2rem;
   font-size: 1.05rem;
