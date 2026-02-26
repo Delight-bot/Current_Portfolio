@@ -1,8 +1,11 @@
 .footer {
-  background: linear-gradient(135deg, #2C1810 0%, #1a1a2e 100%);
+  background: rgba(5, 5, 5, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   color: white;
   padding: 2rem;
   text-align: center;
+  border-top: 1px solid rgba(180, 172, 162, 0.15);
 }
 
 .footer-content {
@@ -18,7 +21,7 @@
 
 .built-with {
   font-size: 0.9rem;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 @media (max-width: 768px) {

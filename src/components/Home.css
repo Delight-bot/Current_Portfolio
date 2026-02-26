@@ -1,5 +1,5 @@
 .home-section {
-  min-height: 100vh;
+  min-height: calc(100vh - 60px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,38 +10,64 @@
   overflow: hidden;
 }
 
+/* ── Slideshow ── */
+.slideshow-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 800%; /* 8 slides × 100% */
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
+  z-index: 0;
+}
+
+.slide {
+  width: 12.5%; /* 100% / 8 slides */
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+
 .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(255, 107, 107, 0.85) 0%, rgba(255, 217, 61, 0.85) 100%);
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.88) 0%, rgba(40, 40, 40, 0.75) 100%);
   animation: fadeInOverlay 2.5s ease-in forwards;
-  z-index: 0;
+  z-index: 1;
 }
 
 .home-content {
   max-width: 800px;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .name {
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
   position: relative;
   min-height: 5rem;
 }
 
 .name-intro {
   display: block;
-  animation: showAndHide 4s ease-in-out forwards;
   position: absolute;
   width: 100%;
   left: 0;
+}
+
+.name-intro .letter {
+  display: inline-block;
+  animation: letterScatter 4s ease-in-out forwards;
+  animation-delay: calc(var(--i) * 0.03s);
 }
 
 .name-reveal {
@@ -55,7 +81,7 @@
   margin-bottom: 2rem;
   animation: fadeInUp 1s ease-out 5s forwards;
   opacity: 0;
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
 }
 
 .cta-buttons {
@@ -80,53 +106,53 @@
 }
 
 .btn-primary {
-  background-color: #1a1a1a;
-  color: #ffffff;
-  border: 2px solid #FF6B6B;
+  background: #0a0a0a;
+  color: #D4CFC8;
+  border: 2px solid #B8B4AE;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 .btn-secondary {
   background-color: transparent;
   color: white;
-  border: 2px solid white;
+  border: 2px solid rgba(255, 255, 255, 0.6);
 }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(192, 192, 192, 0.15);
 }
 
 @keyframes fadeInOverlay {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-@keyframes showAndHide {
+@keyframes letterScatter {
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(30px) rotate(0deg);
   }
   15% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) rotate(0deg);
   }
-  70% {
+  60% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) rotate(0deg);
   }
-  85% {
-    opacity: 0.5;
-    transform: translateX(-10px) scale(0.98);
-    filter: blur(2px);
+  75% {
+    opacity: 0.8;
+    filter: blur(1px);
   }
   100% {
     opacity: 0;
-    transform: translateX(-30px) scale(0.95);
-    filter: blur(5px);
+    transform:
+      translateX(calc((var(--i) - 10) * 30px))
+      translateY(calc(sin(var(--i)) * 100px))
+      rotate(calc((var(--i) - 10) * 45deg))
+      scale(0.3);
+    filter: blur(8px);
   }
 }
 

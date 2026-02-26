@@ -1,5 +1,41 @@
 import React from 'react';
+import { SiGmail, SiLinkedin, SiGithub } from 'react-icons/si';
+import { FiCalendar } from 'react-icons/fi';
 import './Contact.css';
+
+const CONTACT_LINKS = [
+  {
+    icon: SiGmail,
+    color: '#EA4335',
+    label: 'Email',
+    display: 'dnyanhet@gsumail.gram.edu',
+    href: 'mailto:dnyanhet@gsumail.gram.edu',
+  },
+  {
+    icon: SiLinkedin,
+    color: '#0A66C2',
+    label: 'LinkedIn',
+    display: 'linkedin.com/in/delight-nyanhete',
+    href: 'https://linkedin.com/in/delight-nyanhete',
+    external: true,
+  },
+  {
+    icon: SiGithub,
+    color: '#ffffff',
+    label: 'GitHub',
+    display: 'github.com/Delight-bot',
+    href: 'https://github.com/Delight-bot',
+    external: true,
+  },
+  {
+    icon: FiCalendar,
+    color: '#B8B4AE',
+    label: 'Schedule a Coffee Chat',
+    display: 'Book a time on Calendly',
+    href: 'https://calendly.com/yourlink',
+    external: true,
+  },
+];
 
 const Contact = () => {
   return (
@@ -12,57 +48,28 @@ const Contact = () => {
 
         <div className="contact-content">
           <div className="contact-info">
-            <div className="contact-item">
-              <div className="icon-wrapper">
-                <span className="icon">📧</span>
-              </div>
-              <div className="contact-details">
-                <h3>Email</h3>
-                <a href="mailto:dnyanhet@gsumail.gram.edu">dnyanhet@gsumail.gram.edu</a>
-              </div>
-            </div>
-
-            <div className="contact-item">
-              <div className="icon-wrapper">
-                <span className="icon">💼</span>
-              </div>
-              <div className="contact-details">
-                <h3>LinkedIn</h3>
-                <a href="https://linkedin.com/in/delight-nyanhete" target="_blank" rel="noopener noreferrer">
-                  linkedin.com/in/delight-nyanhete
-                </a>
-              </div>
-            </div>
-
-            <div className="contact-item">
-              <div className="icon-wrapper">
-                <span className="icon">💻</span>
-              </div>
-              <div className="contact-details">
-                <h3>GitHub</h3>
-                <a href="https://github.com/Delight-bot" target="_blank" rel="noopener noreferrer">
-                  github.com/Delight-bot
-                </a>
-              </div>
-            </div>
-
-            <div className="contact-item">
-              <div className="icon-wrapper">
-                <span className="icon">📅</span>
-              </div>
-              <div className="contact-details">
-                <h3>Schedule a Coffee Chat</h3>
-                <a href="https://calendly.com/yourlink" target="_blank" rel="noopener noreferrer">
-                  Book a time on Calendly
-                </a>
-              </div>
-            </div>
+            {CONTACT_LINKS.map(({ icon: Icon, color, label, display, href, external }) => (
+              <a
+                key={label}
+                className="contact-item"
+                href={href}
+                {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              >
+                <div className="icon-wrapper">
+                  <Icon style={{ color }} />
+                </div>
+                <div className="contact-details">
+                  <h3>{label}</h3>
+                  <span>{display}</span>
+                </div>
+              </a>
+            ))}
           </div>
 
           <div className="contact-cta">
             <h3>Open to Opportunities</h3>
             <p>
-              I'm actively seeking summer 2026 internships and new grad opportunities in software engineering,
+              I'm actively seeking summer 2026 internships in software engineering,
               machine learning, and quantitative analysis. Let's connect if you'd like to collaborate or discuss tech!
             </p>
             <a href="mailto:dnyanhet@gsumail.gram.edu" className="btn btn-primary">

@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <p className="copyright">
-            © {currentYear} Your Name. All rights reserved.
+            © {currentYear} Delight Nyanhete. All rights reserved.
           </p>
           <p className="built-with">
             Built with React

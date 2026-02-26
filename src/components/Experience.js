@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Experience.css';
 
 const Experience = () => {
@@ -6,7 +6,7 @@ const Experience = () => {
     {
       role: 'Quantitative Analysis Fellow',
       organization: 'Citi Markets',
-      date: 'September 2025 – Present',
+      date: 'Sept – Oct 2025',
       description: 'Advanced financial modeling and quantitative analysis',
       details: [
         '1 of 10 fellows in the Quantitative Analysis track',
@@ -14,13 +14,13 @@ const Experience = () => {
       ]
     },
     {
-      role: 'AI Studio Fellow',
-      organization: 'Break Through Tech AI | Cornell Machine Learning Foundations Certificate',
-      date: 'May 2025 – Present',
-      description: 'Machine learning engineering with industry partner',
+      role: 'AI Studio Fellow — Predictive Maintenance for Oil & Gas Pumps',
+      organization: 'Break Through Tech AI x Accenture',
+      date: 'May – Dec 2025',
+      description: 'Machine learning engineering with Accenture industry partner',
       details: [
-        'Developing regression models with Accenture to predict pump failures using synthetic sensor data',
-        'Reducing unplanned downtime through predictive maintenance models'
+        'Developed a Logistic Regression model using machine health and operating data to predict impending pump failures',
+        'Projected $3.4M+ savings across 100 days by reducing pump downtime by 84%, demonstrating ROI of ML in industrial systems'
       ]
     },
     {
@@ -78,6 +78,17 @@ const Experience = () => {
       ]
     },
     {
+      role: 'Research Fellow — Earthquake Trends vs. Technological Advancements',
+      organization: 'Arkansas Summer Research Institute',
+      date: 'May – June 2024',
+      description: 'Seismic data analysis and research presentation',
+      details: [
+        'Used Python (Pandas, NumPy, TensorFlow, Scikit-learn) to clean earthquake data, perform regression analysis, and calculate p-values',
+        'Conducted research on earthquake trends since 1901 to examine their correlation with technological advancements',
+        'Presented findings via detailed visualizations including geo charts to professors and industry professionals to earn graduating credit'
+      ]
+    },
+    {
       role: 'Executive Board Member',
       organization: 'ACM Chapter, Grambling State University',
       date: 'May 2024 – Present',
@@ -88,6 +99,22 @@ const Experience = () => {
       ]
     }
   ];
+
+  useEffect(() => {
+    const items = document.querySelectorAll('.timeline-item');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    items.forEach(item => observer.observe(item));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section id="experience" className="experience-section">

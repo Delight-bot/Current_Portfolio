@@ -1,6 +1,6 @@
 .projects-section {
   padding: 5rem 2rem;
-  background-color: #0f0f0f;
+  background-color: transparent;
 }
 
 .projects-grid {
@@ -9,24 +9,106 @@
   gap: 2rem;
 }
 
-.project-card {
-  background: #1a1a1a;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+/* ── Scroll-in reveal wrapper ── */
+.card-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 24px rgba(255, 107, 107, 0.3);
+.card-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Tilt wrapper ── */
+.tilt-wrapper {
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  border-radius: 12px;
+}
+
+/* ── Front card ── */
+.project-card {
+  background: rgba(10, 10, 10, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  transition: box-shadow 0.3s ease;
+}
+
+/* ── Preview & Details buttons ── */
+.preview-btn, .details-btn {
+  background: none;
+  border: 1px solid rgba(184, 180, 174, 0.35);
+  color: #B8B4AE;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+.preview-btn:hover, .details-btn:hover {
+  border-color: #D4CFC8;
+  color: #D4CFC8;
+}
+
+/* ── Cuboid side faces ── */
+.edge {
+  position: absolute;
+  display: block;
+  background: linear-gradient(to bottom, #2a2a2a, #111111);
+}
+
+.edge-right {
+  top: 2px; bottom: 2px;
+  left: 100%;
+  width: 16px;
+  background: linear-gradient(to right, #7A7672, #D4CFC8, #A09C98);
+  transform-origin: left center;
+  transform: rotateY(90deg);
+  border-radius: 0 4px 4px 0;
+}
+
+.edge-left {
+  top: 2px; bottom: 2px;
+  right: 100%;
+  width: 16px;
+  background: linear-gradient(to left, #7A7672, #D4CFC8, #A09C98);
+  transform-origin: right center;
+  transform: rotateY(-90deg);
+  border-radius: 4px 0 0 4px;
+}
+
+.edge-bottom {
+  left: 2px; right: 2px;
+  top: 100%;
+  height: 16px;
+  background: linear-gradient(to bottom, #B8B4AE, #707070);
+  transform-origin: top center;
+  transform: rotateX(-90deg);
+  border-radius: 0 0 4px 4px;
+}
+
+.edge-top {
+  left: 2px; right: 2px;
+  bottom: 100%;
+  height: 16px;
+  background: linear-gradient(to top, #C8C4BE, #808080);
+  transform-origin: bottom center;
+  transform: rotateX(90deg);
+  border-radius: 4px 4px 0 0;
 }
 
 .project-thumbnail {
   width: 100%;
   height: 200px;
-  background-color: #f0f0f0;
+  background-color: #111111;
   overflow: hidden;
 }
 
@@ -60,12 +142,22 @@
 }
 
 .tech-badge {
-  background-color: #FFE8E8;
-  color: #FF6B6B;
-  padding: 0.4rem 0.8rem;
+  background-color: #111111;
+  color: #C8C4Be;
+  padding: 0.35rem 0.75rem;
   border-radius: 12px;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  line-height: 1;
+}
+
+.tech-badge svg {
+  font-size: 1rem;
+  flex-shrink: 0;
 }
 
 .project-links {
@@ -75,25 +167,82 @@
 }
 
 .project-links a {
-  color: #FF6B6B;
+  color: #B8B4AE;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .project-links a:hover {
-  color: #FFD93D;
+  color: #D4CFC8;
   text-decoration: underline;
 }
 
-/* Modal Styles */
+/* ── Preview modal ── */
+.preview-modal {
+  background: rgba(10, 10, 10, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 12px;
+  width: 90vw;
+  max-width: 1100px;
+  height: 82vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.95), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+.preview-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  flex-shrink: 0;
+}
+
+.preview-modal-title {
+  flex: 1;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.visit-btn {
+  background: linear-gradient(135deg, #B8B4AE, #D4CFC8);
+  color: #050505;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.preview-modal-body {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 0 0 12px 12px;
+}
+
+.preview-modal-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* ── Details Modal ── */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.85);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,7 +252,8 @@
 }
 
 .modal-content {
-  background: #1a1a1a;
+  background: rgba(10, 10, 10, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   padding: 2.5rem;
   max-width: 700px;
@@ -112,6 +262,7 @@
   overflow-y: auto;
   position: relative;
   animation: modalSlideIn 0.3s ease-out;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.07);
 }
 
 @keyframes modalSlideIn {
@@ -153,7 +304,7 @@
 
 .modal-section h3 {
   font-size: 1.3rem;
-  color: #FF6B6B;
+  color: #B8B4AE;
   margin-bottom: 0.8rem;
 }
 
@@ -183,19 +334,261 @@
 }
 
 .modal-links .btn-primary {
-  background: linear-gradient(135deg, #FF6B6B, #FFD93D);
+  background: linear-gradient(135deg, #B8B4AE, #D4CFC8);
   color: white;
 }
 
 .modal-links .btn-secondary {
   background-color: transparent;
-  color: #FF6B6B;
-  border: 2px solid #FF6B6B;
+  color: #B8B4AE;
+  border: 2px solid #B8B4AE;
 }
 
 .modal-links .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+  box-shadow: 0 4px 12px rgba(180, 172, 162, 0.4);
+}
+
+/* ── Game placeholder ── */
+.game-placeholder {
+  width: 100%;
+  height: 180px;
+  background: rgba(18, 18, 18, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-placeholder span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  color: rgba(184, 180, 174, 0.22);
+  text-transform: uppercase;
+}
+
+/* ── Game GIF ── */
+.game-gif-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: #0a0a0a;
+}
+
+.game-gif {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Dual-game card ── */
+.dual-game-card {
+  min-height: 260px;
+}
+
+.dual-games {
+  display: flex;
+  height: 100%;
+}
+
+.dual-game-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.dual-game-panel:last-child {
+  border-right: none;
+}
+
+.dual-game-info {
+  padding: 1.2rem 1.2rem 1.5rem;
+  flex: 1;
+}
+
+.dual-game-info h3 {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 0.7rem;
+}
+
+/* ── Card Flip ── */
+.tilt-wrapper.no-tilt {
+  pointer-events: none;
+}
+
+.card-flip-inner {
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-flip-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card-flip-front {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.card-flip-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+/* ── Ice Card ── */
+.ice-card {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg,
+    #071523 0%,
+    #0d2240 25%,
+    #071828 50%,
+    #0a1f3a 75%,
+    #071523 100%
+  );
+  border: 1px solid rgba(150, 210, 255, 0.4);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.8),
+    inset 0 0 60px rgba(80, 160, 255, 0.08),
+    inset 0 1px 0 rgba(200, 235, 255, 0.25);
+}
+
+.ice-frost-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(180, 220, 255, 0.18) 0%, transparent 40%),
+    radial-gradient(ellipse at 85% 15%, rgba(200, 235, 255, 0.14) 0%, transparent 35%),
+    radial-gradient(ellipse at 50% 80%, rgba(160, 200, 240, 0.12) 0%, transparent 45%),
+    radial-gradient(ellipse at 30% 60%, rgba(190, 225, 255, 0.10) 0%, transparent 30%);
+  pointer-events: none;
+}
+
+.ice-crystals {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(30deg,  rgba(200, 235, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(-30deg, rgba(200, 235, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg,  rgba(200, 235, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px, 40px 40px, 20px 20px;
+  pointer-events: none;
+}
+
+.ice-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  pointer-events: none;
+}
+
+.ice-snowflake {
+  font-size: 2.8rem;
+  animation: iceGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes iceGlow {
+  from { filter: drop-shadow(0 0 6px rgba(150, 210, 255, 0.6)); }
+  to   { filter: drop-shadow(0 0 20px rgba(150, 210, 255, 1)); }
+}
+
+.ice-frozen-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: rgba(200, 235, 255, 0.65);
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 16px rgba(100, 180, 255, 0.9);
+  filter: blur(0.4px);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ── Ice Cracks ── */
+.ice-cracks {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.crack {
+  fill: none;
+  stroke: rgba(210, 240, 255, 0.9);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 2px rgba(160, 215, 255, 0.8));
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+.cracks-visible .crack-1 { animation: drawCrack 0.22s 0.00s ease-out forwards; }
+.cracks-visible .crack-2 { animation: drawCrack 0.22s 0.06s ease-out forwards; }
+.cracks-visible .crack-3 { animation: drawCrack 0.22s 0.10s ease-out forwards; }
+.cracks-visible .crack-4 { animation: drawCrack 0.22s 0.13s ease-out forwards; }
+.cracks-visible .crack-5 { animation: drawCrack 0.22s 0.16s ease-out forwards; }
+.cracks-visible .crack-6 { animation: drawCrack 0.22s 0.08s ease-out forwards; }
+.cracks-visible .crack-7 { animation: drawCrack 0.22s 0.05s ease-out forwards; }
+
+@keyframes drawCrack {
+  to { stroke-dashoffset: 0; }
+}
+
+/* ── Ice Shatter ── */
+.ice-shatter-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.shard {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    #071523 0%,
+    #0d2240 25%,
+    #071828 50%,
+    #0a1f3a 75%,
+    #071523 100%
+  );
+  border: 1px solid rgba(150, 210, 255, 0.25);
+  animation: shatterFly 0.55s ease-in forwards;
+}
+
+.shard-0 { clip-path: polygon(0% 0%, 48% 0%, 42% 44%, 0% 38%);        --tx: -80px; --ty: -80px; --rot: -18deg; }
+.shard-1 { clip-path: polygon(48% 0%, 100% 0%, 100% 36%, 58% 44%);     --tx:  80px; --ty: -80px; --rot:  18deg; }
+.shard-2 { clip-path: polygon(0% 38%, 42% 44%, 36% 68%, 0% 64%);       --tx: -95px; --ty:   5px; --rot: -22deg; }
+.shard-3 { clip-path: polygon(42% 44%, 58% 44%, 62% 68%, 36% 68%);     --tx:   0px; --ty:  10px; --rot:   5deg; }
+.shard-4 { clip-path: polygon(58% 44%, 100% 36%, 100% 64%, 62% 68%);   --tx:  95px; --ty:   5px; --rot:  22deg; }
+.shard-5 { clip-path: polygon(0% 64%, 36% 68%, 28% 100%, 0% 100%);     --tx: -80px; --ty:  80px; --rot: -12deg; }
+.shard-6 { clip-path: polygon(36% 68%, 62% 68%, 70% 100%, 28% 100%);   --tx:   0px; --ty:  95px; --rot:   8deg; }
+.shard-7 { clip-path: polygon(62% 68%, 100% 64%, 100% 100%, 70% 100%); --tx:  80px; --ty:  80px; --rot:  18deg; }
+
+@keyframes shatterFly {
+  0%   { transform: translate(0, 0) rotate(0deg) scale(1);   opacity: 1; }
+  30%  { opacity: 0.9; }
+  100% { transform: translate(var(--tx), var(--ty)) rotate(var(--rot)) scale(0.7); opacity: 0; }
 }
 
 @media (max-width: 768px) {
@@ -209,5 +602,10 @@
 
   .modal-content h2 {
     font-size: 1.6rem;
+  }
+
+  .preview-modal {
+    width: 95vw;
+    height: 75vh;
   }
 }

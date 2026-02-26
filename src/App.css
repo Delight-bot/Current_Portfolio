@@ -10,12 +10,21 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* REVERT: background-color: #050505; */
+  background-color: #050505; /* fallback — image set via inline style in App.js */
 }
 
 .App {
   min-height: 100vh;
+  padding-top: 60px; /* reserve space under the fixed 60px header */
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Push every anchor section below the fixed 60px header when navigated to */
+section[id] {
+  scroll-margin-top: 68px;
 }
