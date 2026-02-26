@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alex Chen | Software Engineer Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#39FF14",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }</script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .satin-gradient {
+            background: #000000;
+        }
+    </style>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .satin-gradient {
+            background: #000000;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased min-h-screen">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden satin-gradient">
+<!-- Header -->
+<header class="flex items-center bg-transparent p-6 justify-between">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full glass-card">
+<span class="text-primary font-bold text-lg">AC</span>
+</div>
+<div class="flex gap-4">
+<button class="flex items-center justify-center size-10 rounded-full glass-card hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-slate-100">mail</span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full glass-card hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-slate-100">settings</span>
+</button>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="flex flex-col items-center px-6 py-8">
+<div class="relative mb-6">
+<div class="absolute inset-0 bg-primary/30 blur-3xl rounded-full"></div>
+<div class="relative size-32 rounded-full border-2 border-primary/30 p-1">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Professional portrait of a software engineer smiling" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDgI3uaDwq85wU4dl1iNWnULjgIjuaZv0J6QYFKTyBLG6j0XHyTehQliBZDd_06n1Rn6q9yp4r3ar-nRpR8mnHFOSSmoau6AdIgmgKGtIbCGlfTZsWHoD5uUiSRo8aSc6Wj-GwTexHhawSkqqWIg1GnKHHcE8ZFWrURtboiI7-EPYEsCelVcKBBJg7nU1Tuw6WwPPSkGGjPYBNkk9SiLaAuDz4cNQWkMCcJlwOy0pZq5I-vcefWA-hDe-MxCUb3uI-2RAIkVTGqF4qF')">
+</div>
+</div>
+</div>
+<div class="text-center">
+<h1 class="text-3xl font-bold tracking-tight text-slate-100 mb-1">Alex Chen</h1>
+<p class="text-primary font-medium mb-2">Software Engineer &amp; CS Student</p>
+<p class="text-slate-400 text-sm max-w-[280px] mx-auto leading-relaxed">
+                    Building scalable systems and exploring the intersection of AI and distributed infrastructure.
+                </p>
+</div>
+</section>
+<!-- Tech Stack Section -->
+<section class="px-6 py-4">
+<h2 class="text-slate-100 text-sm font-semibold uppercase tracking-widest mb-4 opacity-60">Tech Stack</h2>
+<div class="flex flex-wrap gap-2">
+<span class="glass-card px-4 py-2 rounded-full text-xs font-medium text-slate-200">Python</span>
+<span class="glass-card px-4 py-2 rounded-full text-xs font-medium text-slate-200">Rust</span>
+<span class="glass-card px-4 py-2 rounded-full text-xs font-medium text-slate-200">TypeScript</span>
+<span class="glass-card px-4 py-2 rounded-full text-xs font-medium text-slate-200">Docker</span>
+<span class="glass-card px-4 py-2 rounded-full text-xs font-medium text-slate-200">Go</span>
+</div>
+</section>
+<!-- Featured Projects Section -->
+<section class="px-6 py-8 flex-1">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xl font-bold text-slate-100">Featured Projects</h2>
+<a class="text-primary text-sm font-medium" href="#">View All</a>
+</div>
+<div class="grid gap-6">
+<!-- Project 1 -->
+<div class="glass-card rounded-xl overflow-hidden group">
+<div class="h-48 w-full bg-cover bg-center" data-alt="Abstract 3D neural network visualization nodes and connections" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDclGK-E23fHdgtmMCHVewgaN4P6b80Cslj2KgAs268h3hpJjTuOg3L1d6j519jycXH0cyjFBa9irefnb7zMq0HGYppnTTBrrnDNMr1QcWL7LmaEAhBt-R6jQs4-uvF8dw5WvZlHmNqJa_q3rYUFNSKrxkDEJYazx4xFZT6YIiCHiIwNCOVx4VVrUOKiMFIxP7m_Lq6aUW_24aCrKhBHoKJkkYFneMh6Ykrix8uCSKRSW26v_nSmIV7X0gAwRfPefups1jqslPPN8tO')">
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-bold text-slate-100">Neural Network Visualizer</h3>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_outward</span>
+</div>
+<p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                            A real-time 3D visualization tool for deep learning models built with Rust and Three.js.
+                        </p>
+<div class="flex gap-2">
+<span class="text-[10px] uppercase tracking-tighter text-primary/80 font-bold">Rust</span>
+<span class="text-[10px] uppercase tracking-tighter text-primary/80 font-bold">WebGL</span>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="glass-card rounded-xl overflow-hidden group">
+<div class="h-48 w-full bg-cover bg-center" data-alt="Dark server room with glowing blue data lights" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDGqoXyZDZWpoQyHzkJWsm65d1PQLbydgeFZ7wb9VgiCZoNK8jRR8Zk6Z_eRRYYkQZgedvvKUE3_CCjqLWXgawJ2PO5I_qB8rtfH8dtQzTtSOSSCspYZ-vkUKDbiSisq_xKyGCCsUv5e3dlHxxQADS0Pt5SQxjMvWRzHHFwki6lE9nWkGwSHpZpgQK53XJBxO4nKrfXT-0VIDvIMoAIKp-U93V0JsliVlWAENuu8iqVHX9u6lS26OgEucpBNs9UAEul-Az7jMJbrTYA')">
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-lg font-bold text-slate-100">Distributed DB System</h3>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">arrow_outward</span>
+</div>
+<p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                            High-availability key-value store with Raft consensus implementation for data consistency.
+                        </p>
+<div class="flex gap-2">
+<span class="text-[10px] uppercase tracking-tighter text-primary/80 font-bold">Go</span>
+<span class="text-[10px] uppercase tracking-tighter text-primary/80 font-bold">Kubernetes</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer / Social Links -->
+<footer class="px-6 py-10 mt-auto">
+<div class="flex flex-col items-center gap-6">
+<div class="flex gap-8">
+<a class="flex items-center gap-2 text-slate-400 hover:text-slate-100 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">code</span>
+<span class="text-sm font-medium">GitHub</span>
+</a>
+<a class="flex items-center gap-2 text-slate-400 hover:text-slate-100 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+<span class="text-sm font-medium">LinkedIn</span>
+</a>
+</div>
+<p class="text-slate-600 text-[10px] uppercase tracking-widest">© 2024 Alex Chen • Made with Precision</p>
+</div>
+</footer>
+<!-- Bottom Navigation Bar -->
+<nav class="sticky bottom-0 z-50 flex items-center justify-around bg-black border-t border-white/10 rounded-t-2xl px-6 py-4">
+<a class="flex flex-col items-center text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">home</span>
+</a>
+<a class="flex flex-col items-center text-slate-500 hover:text-slate-100" href="#">
+<span class="material-symbols-outlined">terminal</span>
+</a>
+<a class="flex flex-col items-center text-slate-500 hover:text-slate-100" href="#">
+<span class="material-symbols-outlined">person</span>
+</a>
+<a class="flex flex-col items-center text-slate-500 hover:text-slate-100" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</nav>
+</div>
+</body></html>
