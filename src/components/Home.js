@@ -59,7 +59,7 @@ const Home = () => {
             View Projects
           </button>
           <a
-          href="/Delight_Nyanhete_Resume.pdf" 
+          href={`${process.env.PUBLIC_URL}/Delight_Nyanhete_Resume.pdf`}
           className="btn btn-secondary" 
           download="Delight_Nyanhete_Resume.pdf"
 >
