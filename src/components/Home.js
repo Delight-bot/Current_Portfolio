@@ -58,9 +58,13 @@ const Home = () => {
           <button className="btn btn-primary" onClick={scrollToProjects}>
             View Projects
           </button>
-          <a href="/resume.pdf" className="btn btn-secondary" download>
-            Download Resume
-          </a>
+          <a
+          href="/Delight_Nyanhete_Resume.pdf" 
+          className="btn btn-secondary" 
+          download="Delight_Nyanhete_Resume.pdf"
+>
+  Download Resume
+</a>
         </div>
       </div>
     </section>
