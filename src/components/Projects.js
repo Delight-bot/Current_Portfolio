@@ -388,6 +388,7 @@ const Projects = () => {
                 <span className="edge edge-left"></span>
                 <span className="edge edge-top"></span>
                 <span className="edge edge-bottom"></span>
+
               </div>
             </div>
           ))}

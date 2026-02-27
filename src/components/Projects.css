@@ -572,8 +572,8 @@
     #0a1f3a 75%,
     #071523 100%
   );
-  border: 1px solid rgba(150, 210, 255, 0.25);
-  animation: shatterFly 0.55s ease-in forwards;
+  border: 1px solid rgba(150, 210, 255, 0.3);
+  animation: shatterFly 0.5s ease-in forwards;
 }
 
 .shard-0 { clip-path: polygon(0% 0%, 48% 0%, 42% 44%, 0% 38%);        --tx: -80px; --ty: -80px; --rot: -18deg; }
