@@ -1,6 +1,6 @@
 import React from 'react';
 import { SiGmail, SiLinkedin, SiGithub } from 'react-icons/si';
-import { FiCalendar, FiPhone } from 'react-icons/fi';
+import { FiCalendar } from 'react-icons/fi';
 import './Contact.css';
 
 const CONTACT_LINKS = [
@@ -28,18 +28,11 @@ const CONTACT_LINKS = [
     external: true,
   },
   {
-    icon: FiPhone,
-    color: '#4CAF50',
-    label: 'Phone',
-    display: '+1 318 516 9944',
-    href: 'tel:+13185169944',
-  },
-  {
     icon: FiCalendar,
     color: '#B8B4AE',
     label: 'Schedule a Coffee Chat',
     display: 'Book a time on Calendly',
-    href: 'https://calendly.com/delightnyanhete2023/30min',
+    href: 'https://calendly.com/yourlink',
     external: true,
   },
 ];
