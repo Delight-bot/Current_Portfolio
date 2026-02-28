@@ -4,19 +4,13 @@ import { FiCalendar, FiPhone } from 'react-icons/fi';
 import './Contact.css';
 
 const CONTACT_LINKS = [
-  {
-    icon: FiPhone,
-    color: '#4CAF50',
-    label: 'Phone',
-    display: '(318) 516-9944',
-    href: 'tel:3185169944',
-  },
+ 
   {
     icon: SiGmail,
     color: '#EA4335',
     label: 'Email',
-    display: 'dnyanhet@gsumail.gram.edu',
-    href: 'mailto:dnyanhet@gsumail.gram.edu',
+    display: 'delightnyanhete2023@gmail.com',
+    href: 'mailto:delightnyanhete2023@gmail.com',
   },
   {
     icon: SiLinkedin,
@@ -42,6 +36,13 @@ const CONTACT_LINKS = [
     href: 'https://calendly.com/yourlink',
     external: true,
   },
+  {
+    icon: FiPhone,
+    color: '#4CAF50',
+    label: 'Phone',
+    display: '(318) 516-9944',
+    href: 'tel:3185169944',
+  },
 ];
 
 const Contact = () => {
@@ -50,7 +51,7 @@ const Contact = () => {
       <div className="container">
         <h2 className="section-title">Let's Connect</h2>
         <p className="contact-intro">
-          I'm always open to discussing new opportunities, collaborations, or just chatting about tech and AI!
+          I'm always open to discussing new opportunities,hatting about tech and AI and learning about companies, eg day to day lives of engineers in the field
         </p>
 
         <div className="contact-content">
@@ -76,10 +77,10 @@ const Contact = () => {
           <div className="contact-cta">
             <h3>Open to Opportunities</h3>
             <p>
-              I'm actively seeking summer 2026 internships in software engineering,
+              I'm actively seeking summer 2026 internships in software engineering, AI and
               machine learning, and quantitative analysis. Let's connect if you'd like to collaborate or discuss tech!
             </p>
-            <a href="mailto:dnyanhet@gsumail.gram.edu" className="btn btn-primary">
+            <a href="mailto:delightnyanhete2023@gmail.com" className="btn btn-primary">
               Get in Touch
             </a>
           </div>
