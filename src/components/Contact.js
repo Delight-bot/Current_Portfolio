@@ -1,9 +1,16 @@
 import React from 'react';
 import { SiGmail, SiLinkedin, SiGithub } from 'react-icons/si';
-import { FiCalendar } from 'react-icons/fi';
+import { FiCalendar, FiPhone } from 'react-icons/fi';
 import './Contact.css';
 
 const CONTACT_LINKS = [
+  {
+    icon: FiPhone,
+    color: '#4CAF50',
+    label: 'Phone',
+    display: '(318) 516-9944',
+    href: 'tel:3185169944',
+  },
   {
     icon: SiGmail,
     color: '#EA4335',

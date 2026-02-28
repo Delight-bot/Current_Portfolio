@@ -4,7 +4,7 @@ import {
   SiPytorch, SiTensorflow, SiScikitlearn, SiPandas, SiNumpy,
   SiReact, SiNodedotjs, SiFlask, SiTailwindcss, SiUnity, SiDocker,
   SiGit, SiMysql, SiFirebase, SiSupabase, SiSqlite, SiPostgresql, SiLinux,
-  SiOpenai, SiGithub
+  SiOpenai, SiGithub, SiClaude, SiGoogle
 } from 'react-icons/si';
 import './About.css';
 
@@ -37,8 +37,8 @@ const SKILL_ICONS = {
   'Express':         { icon: null,           color: '#ffffff' },
   'GitHub Copilot':  { icon: SiGithub,       color: '#ffffff' },
   'ChatGPT':         { icon: SiOpenai,       color: '#00A67E' },
-  'Claude':          { icon: null,           color: '#D4856A' },
-  'Google Stitch':   { icon: null,           color: '#4285F4' },
+  'Claude':          { icon: SiClaude,        color: '#D4856A' },
+  'Google Stitch':   { icon: SiGoogle,        color: '#4285F4' },
 };
 
 const CATEGORY_LABELS = {
