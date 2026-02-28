@@ -1,0 +1,9 @@
+@keyframes chatFloat {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.chat-fab-float {
+  animation: chatFloat 3s ease-in-out infinite;
+}

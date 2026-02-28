@@ -9,6 +9,7 @@ import Organizations from './components/Organizations';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ChatWidget from './components/Chatwidget';
 
 const bgStyle = {
   backgroundImage: `url(${process.env.PUBLIC_URL}/WebsiteBackground.png)`,
@@ -30,6 +31,7 @@ function App() {
       <Gallery />
       <Contact />
       <Footer />
+      <ChatWidget />
     </div>
   );
 }

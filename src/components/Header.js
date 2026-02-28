@@ -56,6 +56,16 @@ const Header = () => {
               {label}
             </button>
           ))}
+          <button
+            className="nav-link"
+            onClick={() => {
+              localStorage.setItem("delight_chat_widget_hide", "false");
+              localStorage.setItem("delight_chat_widget_open", "true");
+              window.location.reload();}
+            }
+            >
+              Chat
+            </button>
         </nav>
 
         {/* Mobile hamburger */}
@@ -79,6 +89,17 @@ const Header = () => {
             {label}
           </button>
         ))}
+        <button
+  className="mobile-nav-link"
+  onClick={() => {
+    localStorage.setItem("delight_chat_widget_hide", "false");
+    localStorage.setItem("delight_chat_widget_open", "true");
+    setMenuOpen(false);
+    window.location.reload();
+  }}
+>
+  Chat
+</button>
       </nav>
     </header>
   );
