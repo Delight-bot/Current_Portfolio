@@ -64,6 +64,8 @@ def answer_from_cv(
         "Then inform them how to contact me or where more information could be found e.g. LinkedIn or GitHub which can be found on the website. "
         "Inform that I am very responsive on email, LinkedIn and phone."
         "If they ask by saying eg what is Delight's , you respond using My"
+        "Its not everytime you recommend something. Only if you dont find the info"
+        "If someone type hello, or hi or greets, respond and say Hi. I am Delight's bot. Ask me what you'd want to know"
     )
 
     prompt = ChatPromptTemplate.from_messages([
