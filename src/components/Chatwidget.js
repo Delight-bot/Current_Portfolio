@@ -6,7 +6,7 @@ const LS_KEY = "delight_chat_widget_open";   // remember open/closed
 const LS_HIDE_KEY = "delight_chat_widget_hide"; // remember if user clicked X
 
 export default function ChatWidget() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [isHidden, setIsHidden] = useState(false);
 
   const [messages, setMessages] = useState([
@@ -22,7 +22,7 @@ export default function ChatWidget() {
   useEffect(() => {
     const savedOpen = localStorage.getItem(LS_KEY);
     const savedHidden = localStorage.getItem(LS_HIDE_KEY);
-    if (savedOpen === "true") setIsOpen(true);
+    if (savedOpen !== null) setIsOpen(savedOpen === "true");
     if (savedHidden === "true") setIsHidden(true);
   }, []);
 
@@ -97,10 +97,13 @@ export default function ChatWidget() {
     <>
       {/* Floating “teaser” button when closed */}
       {!isOpen && (
-        <button onClick={openWidget} style={styles.fab} aria-label="Open chat">
-          <div style={styles.fabTitle}>Quick summary</div>
-          <div style={styles.fabSub}>Fast answers — click me</div>
-        </button>
+        <div style={styles.fabWrapper}>
+          <button onClick={openWidget} style={styles.fab} aria-label="Open chat">
+            <div style={styles.fabTitle}>Quick summary</div>
+            <div style={styles.fabSub}>Fast answers — click me</div>
+          </button>
+          <button onClick={hideWidget} style={styles.fabDismiss} aria-label="Dismiss chat">✕</button>
+        </div>
       )}
 
       {/* Chat window */}
@@ -162,10 +165,17 @@ export default function ChatWidget() {
 }
 
 const styles = {
-  fab: {
+  fabWrapper: {
     position: "fixed",
     right: "18px",
     bottom: "18px",
+    zIndex: 9999,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-end",
+    gap: "6px",
+  },
+  fab: {
     width: "220px",
     textAlign: "left",
     borderRadius: "16px",
@@ -174,8 +184,20 @@ const styles = {
     color: "#ffffff",
     padding: "12px 14px",
     cursor: "pointer",
-    zIndex: 9999,
     backdropFilter: "blur(10px)",
+  },
+  fabDismiss: {
+    background: "transparent",
+    border: "1px solid rgba(255,255,255,0.5)",
+    color: "rgba(255,255,255,0.7)",
+    borderRadius: "50%",
+    width: "24px",
+    height: "24px",
+    cursor: "pointer",
+    fontSize: "11px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   fabTitle: { fontWeight: 700, fontSize: "14px", marginBottom: "2px" },
   fabSub: { opacity: 0.85, fontSize: "12px" },
